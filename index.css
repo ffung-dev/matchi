@@ -1,0 +1,25 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+
+    margin: 0 ; 
+    padding: 10px ;
+
+}
+
+input {
+    width: 100%;
+    border: 1px solid #6B7A9A;
+    border-radius: 5px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+}
+
+button {
+    border-color: transparent;
+    border-radius: 5px;
+    padding: 7px 15px;
+    background-color: #6B7A9A;
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
