@@ -4,5 +4,8 @@
     "name": "bookmark jar",
     "action": {
         "default_popup": "index.html"
-    }
+    },
+    "permissions": [
+        "tabs"
+    ]
 }
