@@ -1,8 +1,9 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     margin: 0 ; 
     padding: 10px ;
+    min-width: 100px;
 
 }
 
@@ -12,14 +13,29 @@ input {
     border-radius: 5px;
     padding: 10px 12px;
     margin-bottom: 10px;
+    font-size: 15px;
 }
 
 button {
     border-color: transparent;
     border-radius: 5px;
-    padding: 7px 15px;
+    padding: 10px 20px;
     background-color: #6B7A9A;
     color: white;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+    margin-top: 15px;
+    padding-left: 5px;
+    list-style-type: none;
+}
+
+li {
+    margin-top: 5px;
+}
+
+li a {
+    color: #687A9A;
 }

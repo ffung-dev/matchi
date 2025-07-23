@@ -1,19 +1,26 @@
-let inputs = ["link 1", "link 2"]
+let inputs = []
 const inputElement = document.getElementById("input-el")
 const inputButton = document.getElementById("input-btn")
 const ulElement = document.getElementById("ul-el")
 
 inputButton.addEventListener("click", function() {
-    console.log("button clicked")
+    // console.log("button clicked")
     inputs.push(inputElement.value)
+    inputElement.value = ""
     updateList()
 })
 
 function updateList()
 {
-    ulElement.textContent = ""
+    let listItems = ""
     for (let i = 0 ; i < inputs.length ; i++)
     {
-        ulElement.innerHTML += "<li>" + inputs[i] + "</li>"
+        listItems += `
+        <li>
+            <a target='_blank' href='${inputs[i]}'>
+                ${inputs[i]}
+            </a>
+        </li>`
     }
+    ulElement.innerHTML = listItems
 }
