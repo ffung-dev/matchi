@@ -26,13 +26,24 @@ input {
 
 button {
     border-color: transparent;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: #6B7A9A;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px
 }
-#input-btn {
-    padding: 10px 20px;
+
+button:hover {
+    background-color: white;
+    color: #687A9A;
+    border: solid;
+    border-color: #687A9A;
+}
+
+.main-btn {
+    display: block;
+    padding: 10px 40px;
+    width: 100%;
     font-size: 15px;
     margin-bottom: 10px;
 }
