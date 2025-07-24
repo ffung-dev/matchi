@@ -48,6 +48,18 @@ inputButton.addEventListener("click", function() {
     update(inputs)
 })
 
+inputButton.addEventListener("keydown", function(event) {
+    if (event.key === 'Enter' || event.keyCode === 13)
+    {
+        inputs.push(inputElement.value)
+        inputElement.value = ""
+        // save 
+        localStorage.setItem("inputs", JSON.stringify(inputs))
+        update(inputs)
+    }
+
+})
+
 // save tab
 tabLinkButton.addEventListener("onclick", function() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
