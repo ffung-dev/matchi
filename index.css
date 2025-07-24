@@ -99,9 +99,10 @@ li a {
     font-size: 10px;
 }
 
-.theme-container {
+#theme-container {
     margin-top: 10px;
     display: flex;
-    flex-direction: row;
-    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
