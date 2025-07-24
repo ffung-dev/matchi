@@ -50,16 +50,25 @@ h1 {
 
 input {
     width: 100%;
-    border: solid #7a9c57;
+    outline: solid #e5889e;
+    border: none;
     border-radius: 2px;
     padding: 10px 12px;
     margin-top: none;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 15px;
-    color: #7a9c57;
+    color: #e5889e;
     background-color: #fcfff8;
 }
 
+input:focus {
+    outline: solid #d1657f ;
+}
+
+::placeholder {
+    color:#b3c6a0;
+    font-style: italic;
+}
 button {
     border-color: transparent;
     border-radius: 2px;
@@ -85,6 +94,13 @@ button:hover {
 
 .tab {
     padding: 5px 10px ;
+    background-color:#e5889e;
+}
+
+.tab:hover {
+    color:#e5889e;
+    background-color: #fffdfd;
+    border:solid #e5889e;
 }
 
 ul {
