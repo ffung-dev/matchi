@@ -1,5 +1,4 @@
 let inputs = []
-let prevInputs = []
 
 const inputElement = document.getElementById("input-el")
 const inputButton = document.getElementById("input-btn")
@@ -56,3 +55,15 @@ delButton.addEventListener("dblclick", function() {
     update(inputs)
 })
 
+// switch between bookmark list (ul-el) and star-jar
+function switchTab(tab) {
+    let tabContent = document.getElementsByClassName("tab-content")
+
+    // hide tabs
+    for (let i = 0 ; i < tabContent.length ; i++) 
+    {
+        tabContent[i].style.display = "none"
+    }
+    // show tab (based on argument)
+    document.getElementById(tab).style.display = "block"
+}

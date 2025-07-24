@@ -1,28 +1,35 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=DM+Serif+Display:ital@0;1&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">    
     </head>
     <body>
+        <h1>matchi</h1>
+        <p>a quiet place to collect your web treasures</p>
         <input type="text" id="input-el">
         <div class="flex-container">
             <!-- buttons -->
             <div>
                 <button id="input-btn" class="main-btn">save input</button>
-                <button id="tablink-btn" class="main-btn">save tab</button>
+                <button id="tablink-btn" class="main-btn">save current tab</button>
                 <button id="del-btn" class="main-btn">delete all</button>
 
                 <div>
-                    <button id="tab" onclick="">view bookmarks</button>
-                    <button id="tab" onclick="">view jar</button>
+                    <button class="tab" onclick="switchTab('bookmark-list')">view bookmarks</button>
+                    <button class="tab" onclick="switchTab('star-jar')">view jar</button>
                 </div>
             </div>
             <!-- list of bookmarks -->
-            <div id="tab-content">
+            <div class="tab-content" id="bookmark-list">
                 <ul id="ul-el">
                     
                 </ul>
             </div>
-            <div id="tab-content">
+            <!-- star jar -->
+            <div class="tab-content" id="star-jar">
 
             </div>
         </div>
