@@ -1,3 +1,4 @@
+/* fonts */
 .m-plus-rounded-1c-regular {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 400;
@@ -24,7 +25,6 @@
 
 body {
     font-family: 'M PLUS Rounded 1c';
-    background-color: #f9f2e3;
     margin: 0 ; 
     padding: 10px ;
     min-width: 300px;
@@ -35,7 +35,6 @@ body {
 h1 {
     font-family: 'DM Serif Display';
     text-align: center;
-    color:#426320;
     padding: none;
     margin: 0;
     size: 125%;
@@ -50,38 +49,21 @@ h1 {
 
 input {
     width: 100%;
-    outline: solid #e5889e;
     border: none;
     border-radius: 2px;
     padding: 10px 12px;
     margin-top: none;
     margin-bottom: 15px;
     font-size: 15px;
-    color: #e5889e;
-    background-color: #fcfff8;
-}
-
-input:focus {
-    outline: solid #d1657f ;
 }
 
 ::placeholder {
-    color:#b3c6a0;
     font-style: italic;
 }
 button {
     border-color: transparent;
     border-radius: 2px;
-    background-color: #7a9c57;
-    color: #fcfff8;
     font-family: 'M PLUS Rounded 1c';
-}
-
-button:hover {
-    background-color: #fcfff8;
-    color: #7a9c57;
-    border: solid;
-    border-color: #7a9c57;
 }
 
 .main-btn {
@@ -93,14 +75,7 @@ button:hover {
 }
 
 .tab {
-    padding: 5px 10px ;
-    background-color:#e5889e;
-}
-
-.tab:hover {
-    color:#e5889e;
-    background-color: #fffdfd;
-    border:solid #e5889e;
+    padding: 5px 20px ;
 }
 
 ul {
@@ -118,9 +93,15 @@ li a {
     color: #7a9c57;
 }
 
-p {
-    color:#426320;
+.subtitle {
     text-align: center;
     margin-top: 0;
+    font-size: 10px;
+}
+
+.theme-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
     font-size: 10px;
 }
