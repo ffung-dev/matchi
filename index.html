@@ -1,14 +1,15 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" id="theme-css" href="">
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=DM+Serif+Display:ital@0;1&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">    
     </head>
     <body>
-        <h1>m<span style="color: #e5889e;">a</span>t<span style="color: #e5889e;">c</span>h<span style="color: #e5889e;">i</span></h1>
-        <p>a quiet place to collect your web treasures</p>
+        <h1>m<span class="alt-h1">a</span>t<span class="alt-h1">c</span>h<span class="alt-h1">i</span></h1>
+        <p class="subtitle">a quiet place to collect your web treasures</p>
         <input type="text" id="input-el" placeholder="what link would you like to bookmark?">
         <div class="flex-container">
             <!-- buttons -->
@@ -16,10 +17,18 @@
                 <button id="input-btn" class="main-btn">save input</button>
                 <button id="tablink-btn" class="main-btn">save current tab</button>
                 <button id="del-btn" class="main-btn">delete all</button>
-
+                
+                <!-- tab buttons -->
                 <div>
                     <button class="tab" onclick="switchTab('bookmark-list')">view bookmarks</button>
                     <button class="tab" onclick="switchTab('star-jar')">view jar</button>
+                </div>
+                <!-- theme buttons -->
+                <div id="theme-container">
+                    <p style="text-align: left; margin-top: 10px;">themes: </p>
+                    <button onclick="setTheme('default')" class="theme-btn">default</button>
+                    <button onclick="setTheme('strawberry')" class="theme-btn">strawberry</button>
+                    <button onclick="setTheme('chocolate')" class="theme-btn">chocolate</button>                  
                 </div>
             </div>
             <!-- list of bookmarks -->
