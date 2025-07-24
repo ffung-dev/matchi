@@ -1,0 +1,39 @@
+/* default: green, beige*/
+:root {
+    --dark-green: #426320 ;
+    --green: #7a9c57 ;
+    --light-green: #b3c6a0 ;
+    --white-green: #fcfff8 ; 
+    --beige: #f9f2e3 ;
+}   
+
+body {
+    color: var(--dark-green);
+    background-color: var(--beige);
+}
+
+button {
+    color: var(--white-green);
+    background-color: var(--green);
+}
+
+button:hover {
+    background-color: var(--white-green);
+    color: var(--dark-green);
+    border: solid var(--dark-green); 
+}
+
+input {
+    outline: solid var(--green);
+    color: var(--green);
+    background-color: var(--white-green);
+
+}
+
+input:focus {
+    outline: solid var(--dark-green);
+}
+
+::placeholder {
+    color: var(--light-green);
+}
