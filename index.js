@@ -4,7 +4,9 @@ const inputElement = document.getElementById("input-el")
 const inputButton = document.getElementById("input-btn")
 const delButton = document.getElementById("del-btn")
 const tabLinkButton = document.getElementById("tablink-btn")
+const themeButtons = document.getElementsByClassName("theme-btn")
 const ulElement = document.getElementById("ul-el")
+const themeCSS = document.getElementById("theme-css")
 
 // array of inputs in local storage
 const storedInputs = JSON.parse(localStorage.getItem("inputs"))
@@ -12,6 +14,13 @@ if (storedInputs)
 {
     inputs = storedInputs
     update(inputs)
+}
+
+// set theme
+try {
+    setTheme(localStorage.getItem("theme"))
+} catch {
+    setTheme("default")
 }
 
 function update(items)
@@ -50,7 +59,7 @@ tabLinkButton.addEventListener("onclick", function() {
 
 // delete all
 delButton.addEventListener("dblclick", function() {
-    localStorage.clear()
+    localStorage.removeItem("inputs")
     inputs = []
     update(inputs)
 })
@@ -66,4 +75,17 @@ function switchTab(tab) {
     }
     // show tab (based on argument)
     document.getElementById(tab).style.display = "block"
+}
+
+function setTheme(theme) {
+    if (theme == 'default') {
+        themeCSS.href = "./themes/default.css"
+        localStorage.setItem("theme", "default")
+    } else if (theme == 'strawberry') {
+        themeCSS.href = "./themes/strawberry.css"
+        localStorage.setItem("theme", "strawberry")
+    } else if (theme == 'chocolate') {
+        themeCSS.href = "./themes/chocolate.css"
+        localStorage.setItem("theme", "chocolate")
+    }
 }
