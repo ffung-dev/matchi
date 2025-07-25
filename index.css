@@ -27,7 +27,8 @@ body {
     font-family: 'M PLUS Rounded 1c';
     margin: 0 ; 
     padding: 10px ;
-    min-width: 500px;
+    max-width: 500px;
+    width: 500px;
     min-height: 400px;
 }
 
@@ -73,9 +74,6 @@ button {
 
 .tab-content {
     flex: 0 0 52%;
-    white-space: nowrap;        
-    overflow: hidden;            
-    text-overflow: ellipsis;
 }
 
 .main-btn {
@@ -101,8 +99,18 @@ li {
     margin-top: 5px;
 }
 
-li a {
+a {
     color: #7a9c57;
+    display: inline-block;
+    white-space: nowrap;        
+    overflow: hidden;            
+    text-overflow: ellipsis;
+}
+
+.scroll-menu {
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .subtitle {
