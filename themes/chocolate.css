@@ -47,6 +47,12 @@ input:focus {
     background-color: var(--brown);
 }
 
+.switch-btn:hover {
+    background-color: var(--beige);
+    color: var(--dark-brown);
+    border: solid var(--dark-brown); 
+}
+
 .tab:hover {
     color: var(--brown);
     background-color: var(--beige);
