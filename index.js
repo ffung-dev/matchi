@@ -4,8 +4,10 @@ const inputElement = document.getElementById("input-el")
 const inputButton = document.getElementById("input-btn")
 const delButton = document.getElementById("del-btn")
 const tabLinkButton = document.getElementById("tablink-btn")
-const themeButtons = document.getElementsByClassName("theme-btn")
 const ulElement = document.getElementById("ul-el")
+
+const switchTabButtons = document.getElementsByClassName("switch-btn");
+const themeButtons = document.getElementsByClassName("theme-btn")
 const themeCSS = document.getElementById("theme-css")
 
 // array of inputs in local storage
@@ -17,11 +19,8 @@ if (storedInputs)
 }
 
 // set theme
-try {
-    setTheme(localStorage.getItem("theme"))
-} catch {
-    setTheme("default")
-}
+let savedTheme = localStorage.getItem("theme")
+setTheme(savedTheme || "default")
 
 function update(items)
 {
@@ -48,8 +47,8 @@ inputButton.addEventListener("click", function() {
     update(inputs)
 })
 
-inputButton.addEventListener("keydown", function(event) {
-    if (event.key === 'Enter' || event.keyCode === 13)
+inputElement.addEventListener("keydown", function({key}) {
+    if (key === 'Enter')
     {
         inputs.push(inputElement.value)
         inputElement.value = ""
@@ -57,11 +56,10 @@ inputButton.addEventListener("keydown", function(event) {
         localStorage.setItem("inputs", JSON.stringify(inputs))
         update(inputs)
     }
-
 })
 
 // save tab
-tabLinkButton.addEventListener("onclick", function() {
+tabLinkButton.addEventListener("click", function() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         inputs.push(tabs[0].url)
         localStorage.setItem("inputs", JSON.stringify(inputs))
@@ -77,7 +75,16 @@ delButton.addEventListener("dblclick", function() {
 })
 
 // switch between bookmark list (ul-el) and star-jar
-function switchTab(tab) {
+for (let i = 0 ; i < switchTabButtons.length ; i++)
+{
+    switchTabButtons[i].addEventListener("click", function() {
+        switchTab(this.dataset.tab)
+        console.log(this.dataset.tab)
+    })
+}
+
+function switchTab(tab) 
+{
     let tabContent = document.getElementsByClassName("tab-content")
 
     // hide tabs
@@ -89,14 +96,23 @@ function switchTab(tab) {
     document.getElementById(tab).style.display = "block"
 }
 
+// change theme
+// console.log(themeButtons)
+for (let i = 0 ; i < themeButtons.length ; i++) {
+    let theme = themeButtons[i].dataset.theme
+    themeButtons[i].addEventListener("click", function() {
+        setTheme(theme)
+    })
+}
 function setTheme(theme) {
-    if (theme == 'default') {
+    // console.log("in function " + theme)
+    if (theme == "default") {
         themeCSS.href = "./themes/default.css"
         localStorage.setItem("theme", "default")
-    } else if (theme == 'strawberry') {
+    } else if (theme == "strawberry") {
         themeCSS.href = "./themes/strawberry.css"
         localStorage.setItem("theme", "strawberry")
-    } else if (theme == 'chocolate') {
+    } else if (theme == "chocolate") {
         themeCSS.href = "./themes/chocolate.css"
         localStorage.setItem("theme", "chocolate")
     }

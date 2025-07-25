@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
@@ -20,15 +21,15 @@
                 
                 <!-- tab buttons -->
                 <div>
-                    <button class="tab" onclick="switchTab('bookmark-list')">view bookmarks</button>
-                    <button class="tab" onclick="switchTab('star-jar')">view jar</button>
+                    <button class="switch-btn" data-tab="bookmark-list">view bookmarks</button>
+                    <button class="switch-btn" data-tab="star-jar">view jar</button>
                 </div>
                 <!-- theme buttons -->
                 <div id="theme-container">
                     <p style="display: inline; font-size: 10px;">themes: </p>
-                    <button onclick="setTheme('default')" class="theme-btn">1</button>
-                    <button onclick="setTheme('strawberry')" class="theme-btn">2</button>
-                    <button onclick="setTheme('chocolate')" class="theme-btn">3</button>                  
+                    <button class="theme-btn" data-theme="default">1</button>
+                    <button class="theme-btn" data-theme="strawberry">2</button>
+                    <button class="theme-btn" data-theme="chocolate">3</button>                  
                 </div>
             </div>
             <!-- list of bookmarks -->
