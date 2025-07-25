@@ -44,7 +44,7 @@ input:focus {
     color: var(--light-green);
 }
 
-.tab {
+.switch-btn {
     background-color: var(--pink);
 }
 

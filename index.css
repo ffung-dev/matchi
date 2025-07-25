@@ -27,17 +27,16 @@ body {
     font-family: 'M PLUS Rounded 1c';
     margin: 0 ; 
     padding: 10px ;
-    min-width: 300px;
+    min-width: 500px;
     min-height: 400px;
-
 }
 
 h1 {
     font-family: 'DM Serif Display';
     text-align: center;
-    padding: none;
+    padding-top: 10px;
     margin: 0;
-    size: 125%;
+    font-size: 30px;
 }
 
 .flex-container {
@@ -49,10 +48,11 @@ h1 {
 
 input {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     border: none;
     border-radius: 2px;
     padding: 10px 12px;
-    margin-top: none;
     margin-bottom: 15px;
     font-size: 15px;
 }
@@ -60,10 +60,22 @@ input {
 ::placeholder {
     font-style: italic;
 }
+
 button {
     border-color: transparent;
     border-radius: 2px;
     font-family: 'M PLUS Rounded 1c';
+}
+
+#button-container {
+    flex: 0 0 48%;
+}
+
+.tab-content {
+    flex: 0 0 52%;
+    white-space: nowrap;        
+    overflow: hidden;            
+    text-overflow: ellipsis;
 }
 
 .main-btn {
@@ -74,7 +86,7 @@ button {
     margin-bottom: 10px;
 }
 
-.tab {
+.switch-btn {
     padding: 5px 20px ;
 }
 
