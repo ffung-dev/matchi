@@ -48,6 +48,12 @@ input:focus {
     background-color: var(--pink);
 }
 
+.switch-btn:hover {
+    background-color: var(--white-pink);
+    color: var(--dark-pink);
+    border: solid var(--dark-pink); 
+}
+
 .tab:hover {
     color: var(--pink);
     background-color: var(--white-pink);
