@@ -18,6 +18,11 @@ body {
 .alt-h1 {
     color: var(--pink);
 }
+
+.scroll-menu {
+    scrollbar-color: white var(--pink);
+}
+
 button {
     color: var(--white-green);
     background-color: var(--green);
