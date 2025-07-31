@@ -12,6 +12,10 @@ body {
     background-color: var(--beige);
 }
 
+.scroll-menu {
+    scrollbar-color: white var(--green);
+}
+
 button {
     color: var(--white-green);
     background-color: var(--green);
