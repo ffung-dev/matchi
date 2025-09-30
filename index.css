@@ -85,37 +85,45 @@ button {
     margin-bottom: 10px;
 }
 
+#switch-btn-container {
+    display: flex;
+    gap: 5px;
+}
+
 .switch-btn {
     padding: 5px 20px ;
-}
-
-ul {
-    margin-top: 15px;
-    padding-left: 10px;
-    list-style-type: none;
-    font-size: 15px;
-    display: inline-block;
-    white-space: nowrap;        
-    overflow: hidden;            
-    text-overflow: ellipsis;
-}
-
-li {
-    margin-top: 5px;
-}
-
-a {
-    color: #7a9c57;
-    
+    font-size: 13px;
 }
 
 .scroll-menu {
-    white-space: nowrap;
-    overflow-y: scroll; /*  vertical scrolling */
-    overflow-x: hidden; /*  horizontal scrolling */
     width: 250px;
     height: 240px;
     margin-left: 10px;
+    overflow-y: auto;      /* vertical scroll */
+    overflow-x: hidden;    /* no horizontal scroll */
+}
+
+/* remove nowrap from the UL entirely */
+.scroll-menu ul {
+    margin-top: 15px;
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+/* make each list item a block so it starts on a new line */
+.scroll-menu li {
+    margin-top: 5px;
+    display: block;        /* force full-width block element */
+}
+
+/* truncate link text to container width */
+.scroll-menu li a {
+    display: block;            /* full width of li */
+    width: 100%;               /* exactly the container’s width */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #7a9c57;
 }
 
 .subtitle {
