@@ -30,7 +30,7 @@ button {
 button:hover {
     background-color: var(--white-green);
     color: var(--dark-green);
-    border: solid var(--dark-green); 
+    outline: solid var(--dark-green); 
 }
 
 input {
@@ -55,11 +55,11 @@ input:focus {
 .switch-btn:hover {
     background-color: var(--beige);
     color: var(--dark-brown);
-    border: solid var(--dark-brown); 
+    outline: solid var(--dark-brown); 
 }
 
 .tab:hover {
     color: var(--brown);
     background-color: var(--beige);
-    border: solid var(--brown);
+    outline: solid var(--brown);
 }

@@ -24,7 +24,7 @@ button {
 button:hover {
     background-color: var(--white-green);
     color: var(--dark-green);
-    border: solid var(--dark-green); 
+    outline: solid var(--dark-green); 
 }
 
 input {

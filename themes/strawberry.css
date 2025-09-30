@@ -31,7 +31,7 @@ button {
 button:hover {
     background-color: var(--white-green);
     color: var(--dark-green);
-    border: solid var(--dark-green); 
+    outline: solid var(--dark-green); 
 }
 
 input {
@@ -56,11 +56,11 @@ input:focus {
 .switch-btn:hover {
     background-color: var(--white-pink);
     color: var(--dark-pink);
-    border: solid var(--dark-pink); 
+    outline: solid var(--dark-pink); 
 }
 
 .tab:hover {
     color: var(--pink);
     background-color: var(--white-pink);
-    border: solid var(--pink);
+    outline: solid var(--pink);
 }
