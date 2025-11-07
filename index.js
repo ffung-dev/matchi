@@ -1,3 +1,16 @@
+// detects if in extension or website mode
+const isExtension =
+  typeof chrome !== "undefined" &&
+  chrome.runtime &&
+  chrome.runtime.id;
+
+if (isExtension) {
+  document.body.classList.add("ext-mode");
+} else {
+  document.body.classList.add("web-mode");
+}
+
+
 let inputs = []
 
 const inputElement = document.getElementById("input-el")
