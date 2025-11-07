@@ -23,6 +23,7 @@
   font-style: italic;
 }
 
+
 body {
     font-family: 'M PLUS Rounded 1c';
     margin: 0 ; 
@@ -31,6 +32,32 @@ body {
     min-height: 400px;
     width: 500px;
     height: 400px;
+}
+
+body.web-mode {
+    /* Remove fixed popup sizing */
+    max-width: none;
+    width: auto;
+    height: auto;
+    min-height: 100vh;
+
+    /* Center your content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #e2dbcc;
+    padding: 0;
+}
+
+/* Style the app container for web */
+body.web-mode .app-container {
+    background: #f9f2e3;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
 }
 
 h1 {
@@ -138,4 +165,8 @@ button {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.theme-btn img {
+    object-fit: contain;
 }
